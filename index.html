@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>skottår.nu</title>
+    <meta name="description" content="skottår.nu visar om aktuellt år är skottår">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://skottår.nu/">
+    <meta property="og:image" content="https://skottår.nu/images/og_image.png">
+    <meta property="og:title" content="skottår.nu">
+    <meta property="og:description" content="skottår.nu visar om aktuellt år är skottår">
+    <style>
+      html, body {
+        height: 100%;
+        background-color: #b8a9c9;
+        overflow: hidden;
+      }
+      p {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: -110px 0 0 0;
+        height: 220px;
+        text-align: center;
+        color: #622569;
+        font-family: Arial, serif;
+        font-size: 260px;
+        line-height: 227px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <p id="leap"></p>
+
+    <script>
+      const y = new Date().getFullYear();
+      const leap = new Date(y, 1, 29).getDate() === 29;
+      leap ? document.getElementById("leap").innerHTML = "Ja" : document.getElementById("leap").innerHTML = "Nej";
+    </script>
+  </body>
+
+</html>
